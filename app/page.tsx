@@ -245,7 +245,7 @@ export default function Home() {
             <p>Tell us where you are today. We&apos;ll show you where your brand can go next.</p>
           </Reveal>
           <Reveal delay={120} className="contact-card">
-            <div><small>Email us</small><a href="mailto:hello@evoccommerce.com">hello@evoccommerce.com</a></div>
+            <div><small>Email us</small><a href="mailto:Contact@evoclabs.com">Contact@evoclabs.com</a></div>
             <ArrowLink>Start a Conversation</ArrowLink>
           </Reveal>
         </div>
@@ -259,7 +259,7 @@ export default function Home() {
           </nav>
           <div className="socials"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="YouTube">▶</a></div>
         </div>
-        <div className="section-wrap footer-bottom"><span>© 2026 EVOC Flocommerce. All rights reserved.</span><span>Your Complete Marketplace Growth Partner.</span></div>
+        <div className="section-wrap footer-bottom"><span>© 2026 All rights reserved. EVOC LABS PVT LTD.</span><span>Your Complete Marketplace Growth Partner.</span></div>
       </footer>
     </main>
   );
