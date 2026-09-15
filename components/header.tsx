@@ -7,9 +7,8 @@ import Logo from "@/components/logo";
 const links = [
   ["Services", "/#services"],
   ["Marketplaces", "/#marketplaces"],
-  ["Why Us", "/#why-us"],
   ["Process", "/#process"],
-  ["Stories", "/#stories"],
+  ["Seller Reviews", "/#stories"],
 ];
 
 export default function Header() {
@@ -23,20 +22,29 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
   return (
     <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
       <Logo />
-      <nav className={open ? "nav open" : "nav"} aria-label="Primary navigation">
+      <nav id="primary-navigation" className={open ? "nav open" : "nav"} aria-label="Primary navigation">
         {links.map(([label, href]) => (
           <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
         ))}
       </nav>
-      <GetStartedButton className="button button-small header-cta" />
+      <GetStartedButton className="button button-small header-cta">Talk to our team</GetStartedButton>
       <button
         className={`menu-toggle ${open ? "open" : ""}`}
         onClick={() => setOpen((value) => !value)}
         aria-label="Toggle navigation"
         aria-expanded={open}
+        aria-controls="primary-navigation"
       >
         <i /><i /><i />
       </button>

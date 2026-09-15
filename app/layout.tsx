@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "EVOC — Marketplace Growth Partner",
+  title: "Flocommerce by EVOC Labs | Marketplace Growth Partner",
   description:
     "End-to-end marketplace management for ambitious brands across India's leading e-commerce platforms.",
 };
